@@ -1,0 +1,87 @@
+                                  
+  return (
+
+
+    <div>
+
+
+              <div className='card-border' key={index}>
+
+                                <h3 className='card_title'></h3>
+                                <h2 className='card_description'></h2>
+                                <h3 className='card_status'></h3>
+                                <button>update</button>
+                                <button>Delete</button>
+
+              </div>
+
+
+        <hr></hr>
+
+
+            <form onSubmit={SubmitHandler} className='form'>
+
+
+                      <h3>Create tasks </h3>
+                 {/*      <h2>{title}</h2>
+               <input type='text'   className=''  value={title}  onChange={(event)=> setTitle(event.target.value)}></input> */}
+
+               <labe>Title:</labe>
+
+               <input type='text'   className=''  value={title}  onChange={(event)=> setTitle(event.target.value)}></input> 
+
+               <br></br>
+               <br></br>
+
+                  <labe>Description:</labe>
+
+              <textarea placeholder='description here...'   value={description}  className=''   onChange={(e) => setDescription(e.target.value)} >
+
+
+
+              </textarea>
+
+              <br></br>
+              <br></br>
+
+
+              <label>Status:</label>
+
+               <select defaultValue={status} onChange={(e) =>setStatus(e.target.value)} >
+
+
+
+                <option value="due">Due</option>
+                <option  value="pending">Pending</option>
+                <option  value="completed"  >Completed</option>
+
+
+
+
+               </select>
+               <br></br>
+               <br></br>
+               <button>Create Task</button>
+
+               <h4>{title} </h4>
+               <h4>{status} </h4>
+               <h4>{description} </h4>
+
+
+               <h2>{JSON.stringify(tasks)}</h2>
+
+
+
+
+
+
+
+                     
+
+
+            </form>
+
+
+    </div>
+
+  )

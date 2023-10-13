@@ -1,0 +1,74 @@
+
+     
+
+                      const newTask= {
+                        date: new Date().toLocaleDateString(),
+                        title,
+                        description,
+                        status
+
+                      };
+
+
+
+                       setTasks([...tasks, newTask]);
+                        setTitle("");
+                        setDescription("");
+                        setStatus("");  
+
+
+             
+          }
+
+
+
+
+
+          console.log(tasks);
+
+               
+
+                  
+                    if (tasks.length  > 0 ) {
+
+                          tasklist = tasks.map ( (task ,index ) => {
+
+
+                                    return  (
+
+
+                                                                                        
+                                                              <main className="cards"  key={index} >
+
+                                                                                    <article className="card"  >
+
+                                                                                                        <div className="text">
+
+
+                                                                                                          <h1>{task.title}</h1>
+                                                                                                          <p>{task.description}</p>
+                                                                                                          <h3>{task.status}</h3>
+                                                                                                          <button>update</button>
+                                                                                                          <button>Delete</button>
+                                                                                    
+                                                                                                        </div>
+
+                                                                                    </article>
+
+
+
+                                                             </main>
+
+
+
+
+                                    )
+
+                          }
+
+                    )
+                  
+                  }
+
+
+
